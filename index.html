@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Party Invitation</h1>
+        <h2>Invitation Form</h2>
+        <form action="#">
+            <label for="user" class="name_label">Enter your name: </label>
+            <input type="text" for="user" class="name_input" placeholder="name here">
+            <button type="submit" class="attend-btn"> Attending</button>
+        </form>
+        <hr />
 
+        <h2 class="attend-list">Attendees List</h2>
+        <div class="attendance-list">
+            <p>No attendees yet....</p>
+            <div class="gif"> <img src="./images/loadingGif.gif" alt="loading gif" height="200px"></div>
+        </div>
+
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>
