@@ -54,7 +54,7 @@ function analyseNameInput(attendee) {
         return fd = "sorry, its nothing personal."
     }else  if (fd.length == 1){
         return fd = "You are lucky paa, to be invited, next time you shall see."
-    } else if (attendee.length === 0 || fd.length === 0){
+    } else if (attendee.length === 0){
         console.log("attende is: " + attendee);
         return fd = "You entered nothing in the field."
     }
