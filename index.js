@@ -16,12 +16,14 @@ function btnRes (btn, _res){
         // function gets called: analyseeNameInput()
         var finalDecision = analyseNameInput(nameInput);
         setTimeout(function (){
+            $(".attend-list").text("Checking Attendee Validity....");
             $(".attend-btn").text("Attending");
             $(".attend-btn").removeClass("attend-btn-pressed");
         }, 500);
         
         startAnimation();  
         setTimeout(function (){
+            $(".attend-list").text("Attendee Status..");
             $(".attendance-list p").text(finalDecision).show();
             $(".attend-btn").text("Attend");
         }, 5900);
@@ -38,6 +40,8 @@ function startAnimation (){
 }
 function endAnimation (){
     $(".attendance-list p").text("No attendees yet ...").show();
+    $(".attend-list").text("Attendees List");
+
     startAnimation();
 }
 
