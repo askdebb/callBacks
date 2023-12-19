@@ -64,4 +64,69 @@ background-color: #073946;
 
 .gif {
     display: none;
+    height: 10px;
+}
+/* media queries*/
+@media only screen and (max-width: 280px) {
+    .container {
+        margin: 0px auto;
+        background-color: #f3e8e8;
+        width: 90%;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin: 30px 0;
+        
+    }
+    input {
+        height: 30px;
+        width: 100%;
+    }
+
+    .gif img{
+        /* display: none; */
+        height: 100px!important;
+        width: 100px!important;
+    }
+
+    
+}
+
+@media only screen and (max-width: 430px) {
+    .container {
+        margin: 0px auto;
+        background-color: #f3e8e8;
+        width: 90%;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    h2 {
+        
+        margin: 30px 0;
+        
+    }
+
+    input {
+        height: 30px;
+        width: 100%;
+    }
+
+    
+    .gif img{
+        /* display: none; */
+        height: 100px!important;
+        width: 100px!important;
+    }
+
+
 }

@@ -2,16 +2,19 @@ $(".attend-btn").on("click", function (){
     var btnPressed = $(".attend-btn").addClass("attend-btn-pressed");
     if(btnPressed)
     {
-       
         var nameInput = $(".name_input").val();
         var finalDecision = analyseNameInput(nameInput);
         $(".attendance-list p").slideUp();
+        $(".attendance-list .gif").show();
         setTimeout(function (){
-            $(".attendance-list .gif").show();
-        }, 400);
-        console.log("NameInput: " + nameInput);
-        console.log("NameInput length: " + nameInput.length);
-        console.log("Final Decision: " + finalDecision);
+            $(".attendance-list .gif").hide();
+        }, 5900);
+        setTimeout(function (){
+            $(".attendance-list .gif").text(finalDecision).show();
+        }, 5900);
+   
+
+
 
     } 
     setTimeout(function (){
@@ -23,15 +26,17 @@ function analyseNameInput(attendee) {
 
     var fd = [];
     for(var i = 0; i < attendee.length; i++){
-        
-            if(attendee[i] === "e"){
-                fd.push(attendee[i]);
-               
-            };
-        
+        if(attendee[i] === 'e'){
+            fd.push(attendee[i]);
+            continue;   
+        }      
      }
-     console.log("fd: " +fd);
-     console.log("Letter 'e' in ("+ attendee +"): " + fd.length);
-     
+    if(fd.length > 1){
+        return fd = "sorry, its nothing personal."
+    }else  if (fd.length == 1){
+        return fd = "You are lucky paa, to be invited, next time you shall see."
+    }else {
+        return fd = "Welcome, " + attendee;
     }
+}
 
